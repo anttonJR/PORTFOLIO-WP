@@ -18,19 +18,19 @@
     },
     {
       "source": "/feed/",
-      "destination": "/404.html"
+      "destination": "/index.html"
     },
     {
       "source": "/comments/feed/",
-      "destination": "/404.html"
+      "destination": "/index.html"
     },
     {
-      "source": "/wp-json/(.*)",
-      "destination": "/404.html"
+      "source": "/wp-json/:path*",
+      "destination": "/index.html"
     },
     {
       "source": "/xmlrpc.php",
-      "destination": "/404.html"
+      "destination": "/index.html"
     }
   ],
   "redirects": [
@@ -48,17 +48,16 @@
       "source": "/hello-world",
       "destination": "/hello-world/",
       "permanent": false
-    }
-  ],
-  "headers": [
+    },
     {
-      "source": "/wp-content/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
+      "source": "/about",
+      "destination": "/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/about/",
+      "destination": "/index.html",
+      "permanent": false
     }
   ],
   "trailingSlash": true,
