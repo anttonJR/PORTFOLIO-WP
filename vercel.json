@@ -1,0 +1,43 @@
+{
+  "rewrites": [
+    {
+      "source": "/feed/",
+      "destination": "/404.html"
+    },
+    {
+      "source": "/comments/feed/",
+      "destination": "/404.html"
+    },
+    {
+      "source": "/wp-json/(.*)",
+      "destination": "/404.html"
+    },
+    {
+      "source": "/xmlrpc.php",
+      "destination": "/404.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/wp-content/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.(css|js|jpg|jpeg|png|gif|svg|woff|woff2|ttf|eot|ico))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "trailingSlash": true,
+  "cleanUrls": false
+}
+
