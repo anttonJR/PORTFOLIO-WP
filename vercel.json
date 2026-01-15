@@ -1,6 +1,22 @@
 {
   "rewrites": [
     {
+      "source": "/contact/",
+      "destination": "/contact/index.html"
+    },
+    {
+      "source": "/works/",
+      "destination": "/works/index.html"
+    },
+    {
+      "source": "/hello-world/",
+      "destination": "/hello-world/index.html"
+    },
+    {
+      "source": "/category/:path*/",
+      "destination": "/category/:path*/index.html"
+    },
+    {
       "source": "/feed/",
       "destination": "/404.html"
     },
@@ -15,6 +31,23 @@
     {
       "source": "/xmlrpc.php",
       "destination": "/404.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/contact",
+      "destination": "/contact/",
+      "permanent": false
+    },
+    {
+      "source": "/works",
+      "destination": "/works/",
+      "permanent": false
+    },
+    {
+      "source": "/hello-world",
+      "destination": "/hello-world/",
+      "permanent": false
     }
   ],
   "headers": [
